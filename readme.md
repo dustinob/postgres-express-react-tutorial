@@ -2,4 +2,13 @@
 
 # Learning objectives
 * Build a simple app to better understand the stack.
-* Use this knowledge to build an custom app for my hockey league.
+* U
+
+
+# Stack
+* Node.js
+* Express
+* Sequilize
+
+
+# User Stories
