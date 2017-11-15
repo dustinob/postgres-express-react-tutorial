@@ -1,4 +1,5 @@
 const todosController = require('../controllers').todos;
+const todoItemsController = require('../controllers').todoItems
 
 module.exports = (app) => {
   // default message when the api is called
@@ -10,4 +11,7 @@ module.exports = (app) => {
 
   //list all todos
   app.get('/api/todos', todosController.list);
+
+  //route for add items for each todo list
+  app.post('/api/todos/:todoId/items', todoItemsController.create);
 };
