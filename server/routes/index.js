@@ -1,5 +1,5 @@
 const todosController = require('../controllers').todos;
-const todoItemsController = require('../controllers').todoItems
+const todoItemsController = require('../controllers').todoItems;
 
 module.exports = (app) => {
   // default message when the api is called
