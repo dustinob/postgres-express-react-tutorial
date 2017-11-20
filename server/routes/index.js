@@ -14,4 +14,6 @@ module.exports = (app) => {
 
   //route for add items for each todo list
   app.post('/api/todos/:todoId/items', todoItemsController.create);
+
+  app.get('/api/todos/:todoId', todosController.retrieve);
 };
