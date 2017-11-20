@@ -18,12 +18,11 @@ module.exports = {
           as: 'TodoItems',
         }],
       })
-      // .all()
       .then(todos => res.status(200).send(todos))
       .catch(error => res.status(400).send(error));
-   },
-   retrieve(req, res) {
-     return Todo
+  },
+  retrieve(req, res) {
+    return Todo
       .findById(req.params.todoId, {
         include: [{
           model: TodoItem,
@@ -39,5 +38,28 @@ module.exports = {
         return res.status(200).send(todo);
       })
       .catch(error => res.status(400).send(error));
-   },
+  },
+  update(req, res) {
+    return Todo
+      .findById(req.params.todoId, {
+        include: [{
+          model: TodoItem,
+          as: 'TodoItems',
+        }],
+      })
+      .then(todo => {
+        if (!todo) {
+          return res.status(404).send({
+            message: 'Todo Not Found',
+          });
+        }
+        return todo
+          .update({
+            title: req.body.title || todo.title,
+          })
+          .then(() => res.status(200).send(todo)) //send back the updated todo.
+          .catch((error) => res.status(400).send(error));
+      })
+      .catch((error) => res.status(400).send(error));
+  },
 };
