@@ -1,5 +1,7 @@
 # postgres-express-sequelize-tutorial
 
+https://scotch.io/tutorials/getting-started-with-node-express-and-postgres-using-sequelize
+
 # Learning objectives
 * Build a simple app to better understand the stack.
 *
