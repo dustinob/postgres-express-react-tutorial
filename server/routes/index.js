@@ -20,4 +20,13 @@ module.exports = (app) => {
   app.put('/api/todos/:todoId', todosController.update);
 
   app.delete('/api/todos/:todoId', todosController.destroy);
+
+  app.put('/api/todos/:todoId/items/:todoItemId', todoItemsController.update);
+
+  app.delete('/api/todos/:todoId/items/:todoItemId', todoItemsController.destroy);
+
+  app.all('/api/todos/:todoId/items', (req, res) =>
+    res.status(405).send({
+      message: 'Method Not Allowed',
+  }));
 };
