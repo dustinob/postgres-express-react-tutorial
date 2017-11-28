@@ -1,8 +1,8 @@
-# postgres-express-react-tutorial
+# postgres-express-sequelize-tutorial
 
 # Learning objectives
 * Build a simple app to better understand the stack.
-* U
+*
 
 
 # Stack
@@ -10,5 +10,8 @@
 * Express
 * Sequilize
 
-
-# User Stories
+# Learning Outcome
+* Understand the sequelize better now
+* Used postman to test the calls to the server
+* Understand installation and setup of postgres server
+* more git version control practice.
